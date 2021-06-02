@@ -1,0 +1,18 @@
+.containerMain {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerMain h1 {
+  font-family: "Seaweed Script", cursive;
+  font-size: 100px;
+  color: #244c5c;
+}
+
+.search {
+  width: 75%;
+}

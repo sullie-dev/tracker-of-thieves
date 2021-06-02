@@ -1,4 +1,4 @@
-locations: [
+const locations = [
   // Outposts
   {
     name: "Ancient Spire Outpost",
@@ -538,3 +538,5 @@ locations: [
     type: "Island",
   },
 ];
+
+export default locations;
