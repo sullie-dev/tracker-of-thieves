@@ -1,30 +1,33 @@
 import React, { useState } from "react";
-import location_data from "../location_data";
+import Link from "next/link";
 import { Icon, Form, Input } from "semantic-ui-react";
 import styles from "/styles/Searchbox.module.css";
 
 export default function Searchbox() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [location, setLocation] = useState();
-  const handleChange = (evt) => {
-    setSearchQuery(evt.target.value);
-  };
-  const handleSubmit = () => {
-    setLocation({
-      ...location_data.find((location) => {
-        return location.name == searchQuery;
-      }),
-    });
-  };
-  console.log(location);
+  const [link, setLink] = useState("");
+
   return (
     <div className={styles.searchInput}>
-      <Form onSubmit={handleSubmit}>
+      <Form>
         <Form.Field required>
           <Input
-            onChange={handleChange}
-            onSubmit={handleSubmit}
-            icon={<Icon onClick={handleSubmit} name="search" link />}
+            onChange={(evt) => {
+              const newValue = evt.target.value;
+              setSearchQuery(newValue);
+              setLink(evt.target.value.replace(/\s/g, "-").toLowerCase());
+            }}
+            icon={
+              <Link
+                href={{
+                  pathname: "/location",
+                  query: { searchQuery: searchQuery },
+                }}
+                as={`/${link}`}
+              >
+                <Icon name="search" link />
+              </Link>
+            }
             placeholder="Search for your destination..."
           />
         </Form.Field>
