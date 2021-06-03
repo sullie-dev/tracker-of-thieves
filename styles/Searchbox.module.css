@@ -1,4 +1,9 @@
 .searchInput {
   width: 100%;
-  border: none;
+}
+
+.inputStyles input {
+  font-size: 35px !important;
+  color: #26724e !important;
+  font-family: "Seaweed Script", cursive !important;
 }

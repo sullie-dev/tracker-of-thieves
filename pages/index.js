@@ -1,19 +1,20 @@
-import styles from "../styles/Home.module.css";
+import styles from "/styles/Home.module.css";
 import Searchbox from "../components/Searchbox";
 import Head from "next/head";
 
 const index = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Tracker of Thieves</title>
         <meta
           name="description"
           content="Sea of Thieves location finder"
         ></meta>
-        <meta charset="utf-8"></meta>
+        <meta charSet="utf-8"></meta>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.containerMain}>
+      <div className={styles.content}>
         <h1>Tracker of Thieves</h1>
         <div className={styles.search}>
           <Searchbox />

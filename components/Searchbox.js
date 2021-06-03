@@ -12,6 +12,9 @@ export default function Searchbox() {
       <Form>
         <Form.Field required>
           <Input
+            size="huge"
+            transparent
+            className={styles.inputStyles}
             onChange={(evt) => {
               const newValue = evt.target.value;
               setSearchQuery(newValue);
@@ -19,6 +22,7 @@ export default function Searchbox() {
             }}
             icon={
               <Link
+                type="submit"
                 href={{
                   pathname: "/location",
                   query: { searchQuery: searchQuery },
