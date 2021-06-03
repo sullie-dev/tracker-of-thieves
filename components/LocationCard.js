@@ -2,6 +2,7 @@ import React from "react";
 
 export default function LocationCard(props) {
   const { name, grid, region, type } = props;
+
   return (
     <span>
       <h4>{name}</h4>
