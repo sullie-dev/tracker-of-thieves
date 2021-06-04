@@ -11,7 +11,7 @@ export default function location() {
   useEffect(() => {
     setLocation(
       location_data.find((location) => {
-        return location.name == searchQuery;
+        return location.name.toLowerCase() == searchQuery.toLowerCase();
       }),
     );
   }, []);

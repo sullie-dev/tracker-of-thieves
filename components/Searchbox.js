@@ -13,7 +13,6 @@ export default function Searchbox() {
         <Form.Field required>
           <Input
             size="huge"
-            transparent
             className={styles.inputStyles}
             onChange={(evt) => {
               const newValue = evt.target.value;

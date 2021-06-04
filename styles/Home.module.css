@@ -1,6 +1,10 @@
-.content {
+.container {
   height: 100vh;
   width: 100%;
+  background-color: #80d5ad;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
