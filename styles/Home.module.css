@@ -1,22 +1,3 @@
-.container {
-  height: 100vh;
-  width: 100%;
-  background-color: #80d5ad;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content h1 {
-  font-size: 100px;
-  color: #244c5c;
-  font-family: "Seaweed Script", cursive;
-}
-
 .search {
   width: 75%;
 }

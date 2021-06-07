@@ -1,11 +1,3 @@
 .searchInput {
   width: 100%;
 }
-
-.inputStyles input {
-  border-radius: 10px !important;
-  font-size: 35px !important;
-  color: #26724e !important;
-  font-family: "Seaweed Script", cursive !important;
-  box-shadow: 1px 4px #5b9d86 !important;
-}

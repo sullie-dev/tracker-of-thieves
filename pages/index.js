@@ -1,11 +1,13 @@
 import styles from "/styles/Home.module.css";
-import Searchbox from "../components/Searchbox";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import HomepageHeading from "../components/HomepageHeading";
+import { Segment } from "semantic-ui-react";
+import Footer from "../components/Footer";
 
 const index = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Tracker of Thieves</title>
         <meta
@@ -15,15 +17,9 @@ const index = () => {
         <meta charSet="utf-8"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
-        <Navbar />
-        <div className={styles.content}>
-          <h1>Tracker of Thieves</h1>
-          <div className={styles.search}>
-            <Searchbox />
-          </div>
-        </div>
-      </div>
+      <Navbar />
+      <HomepageHeading />
+      <Footer />
     </div>
   );
 };

@@ -1,23 +1,46 @@
 import React from "react";
 import Link from "next/link";
-import styles from "/styles/Navbar.module.css";
+import { Menu, Container, Segment } from "semantic-ui-react";
+import HomepageHeading from "./HomepageHeading";
 
 export default function Navbar() {
   return (
-    <div className={styles.container}>
-      <nav>
-        <Link href="/roadmap" active>
-          <a className={styles.link}>Raodmap</a>
-        </Link>
-        <Link href="#">
-          <a className={styles.link}>About</a>
-        </Link>
-        <Link href="https://www.seaofthieves.com/">
-          <a className={styles.link} target="_blank">
-            Offical SoT
-          </a>
-        </Link>
-      </nav>
-    </div>
+    <Segment
+      inverted
+      textAlign="center"
+      style={{ minHeight: 75, padding: "1em 0em" }}
+      vertical
+    >
+      <Menu
+        fixed={false ? "top" : null}
+        inverted={true}
+        pointing={true}
+        secondary={true}
+        size="large"
+      >
+        <Container>
+          <Menu.Item active>
+            <Link href="/roadmap" active>
+              <a>Home</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/roadmap">
+              <a>Raodmap</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/">
+              <a>About</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="https://www.seaofthieves.com/">
+              <a target="_blank">Offical SoT</a>
+            </Link>
+          </Menu.Item>
+        </Container>
+      </Menu>
+    </Segment>
   );
 }
