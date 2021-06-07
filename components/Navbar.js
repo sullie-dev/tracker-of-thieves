@@ -19,8 +19,8 @@ export default function Navbar() {
         size="large"
       >
         <Container>
-          <Menu.Item active>
-            <Link href="/roadmap" active>
+          <Menu.Item>
+            <Link href="/">
               <a>Home</a>
             </Link>
           </Menu.Item>

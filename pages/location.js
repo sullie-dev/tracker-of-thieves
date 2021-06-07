@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import location_data from "../location_data";
 import LocationCard from "../components/LocationCard";
 import Error from "../components/Error";
+import Navbar from "../components/Navbar";
 
 export default function location() {
   const router = useRouter();
@@ -25,6 +26,7 @@ export default function location() {
   } else {
     return (
       <div>
+        <Navbar />
         <LocationCard
           name={location.name}
           grid={location.grid}
